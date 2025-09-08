@@ -36,7 +36,28 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
+import React, { useEffect } from 'react';
 
+function AdComponent() {
+  useEffect(() => {
+    try {
+      (window.adsbygoogle = window.adsbygoogle || []).push({});
+    } catch (e) {
+      console.error("AdSense error:", e);
+    }
+  }, []);
+
+  return (
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-4633437485737999"
+     data-ad-slot="3032870719"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+  );
+}
+
+export default AdComponent;
 
 
 const App = () => {
