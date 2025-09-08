@@ -6,6 +6,11 @@
     <!-- Tambahkan izin INTERNET di sini -->
     <uses-permission android:name="android.permission.INTERNET" />
 
+        <!-- Sample AdMob App ID: ca-app-pub-4633437485737999~6134238827 -->
+        <meta-data
+            android:name="com.google.android.gms.ads.org.eu.fastsong"
+            android:value="ca-app-pub-4633437485737999~6134238827"/>
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
