@@ -14,7 +14,11 @@ import SongDetails from "./components/SongDetails";
 import Import from "./components/Import";
 import ads from "ads.txt";
 import { Analytics } from '@vercel/analytics/next';
+    import { initialize } from 'react-native-google-mobile-ads';
 
+    initialize().then(adapterStatuses => {
+      console.log('AdMob initialized:', adapterStatuses);
+    });
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
